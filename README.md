@@ -4,7 +4,8 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
+- [Stack](#stack)
+- [Rules](#rules)
 - [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
@@ -17,8 +18,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+1. Know how to use HTML, CSS, JS, .json
 
+### Optional
+1. Have studies / passed Programming on the Internet
 ```
 Give examples
 ```
@@ -27,6 +30,12 @@ Give examples
 
 Download and open it in React Environment
 
-## Usage <a name = "usage"></a>
+## Stack <a name = "stack"></a>
 
-Add notes about how to use the system.
+Stack used in this repo:
+1. React.JS
+2. Bootstrap 5 CSS
+3. If possible, change json file to a mongoDB file for the sake of implementing a MERN stack
+
+## Rules <a name = "rules"></a>
+1. In order to properly learn React and Bootstrap, do not use any form of templates available online (either from a repo or any website)
