@@ -19,12 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 1. Know how to use HTML, CSS, JS, .json
-
-### Optional
-1. Have studies / passed Programming on the Internet
-```
-Give examples
-```
+2. Have studies / passed Programming on the Internet **(Optional)**
 
 ### Installing
 
