@@ -9,7 +9,7 @@
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Programming on the Internet Subject Outline: https://handbook.uts.edu.au/subjects/31748.html
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -25,21 +25,7 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+Download and open it in React Environment
 
 ## Usage <a name = "usage"></a>
 
