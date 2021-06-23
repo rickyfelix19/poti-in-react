@@ -28,9 +28,11 @@ Download and open it in React Environment
 ## Stack <a name = "stack"></a>
 
 Stack used in this repo:
-1. React.JS
-2. Bootstrap 5 CSS
-3. If possible, change json file to a mongoDB file for the sake of implementing a MERN stack
+1. Bootstrap 5 CSS
+2. React.JS
+3. Change json file to a mongoDB file for the sake of implementing a MERN stack
+4. Instead of using Amazon Web Framework, use Node.js and Express.js 
+5. with this a MERN type project is made
 
 ## Rules <a name = "rules"></a>
 1. In order to properly learn React and Bootstrap, do not use any form of templates available online (either from a repo or any website)
