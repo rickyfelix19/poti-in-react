@@ -6,7 +6,6 @@
 - [Getting Started](#getting_started)
 - [Stack](#stack)
 - [Rules](#rules)
-- [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
 
