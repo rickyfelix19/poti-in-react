@@ -9,7 +9,7 @@
 
 ## About <a name = "about"></a>
 
-Programming on the Internet Subject Outline: https://handbook.uts.edu.au/subjects/31748.html
+**Programming on the Internet** Subject Outline: https://handbook.uts.edu.au/subjects/31748.html
 
 ## Getting Started <a name = "getting_started"></a>
 
