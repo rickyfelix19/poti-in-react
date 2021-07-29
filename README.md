@@ -1,11 +1,11 @@
-# Project Title
-POTI in React
+# POTI in React
+
 ## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
+- [Stack](#stack)
+- [Rules](#rules)
 
 ## About <a name = "about"></a>
 
@@ -23,25 +23,26 @@ What things you need to install the software and how to install them.
 ```
 Give examples
 ```
+**Programming on the Internet** Subject Outline: https://handbook.uts.edu.au/subjects/31748.html
+
+## Getting Started <a name = "getting_started"></a>
+
+Try your best in doing this
+
+### Prerequisites
+
+1. Know how to use HTML, CSS, JS, .json
+2. Have studies / passed Programming on the Internet **(Optional)**
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+Download and open it in React Environment
 
-Say what the step will be
+## Stack <a name = "stack"></a>
 
-```
-Give the example
-```
+Stack used in this repo:
+1. Bootstrap 5 CSS
+2. React.JS
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Usage <a name = "usage"></a>
-
-Add notes about how to use the system.
+## Rules <a name = "rules"></a>
+1. In order to properly learn React and Bootstrap, do not use any form of templates available online (either from a repo or any website)
