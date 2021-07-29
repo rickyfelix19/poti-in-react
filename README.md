@@ -1,5 +1,5 @@
 # Project Title
-
+POTI in React
 ## Table of Contents
 
 - [About](#about)
@@ -9,15 +9,16 @@
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This is the exact copy of POTI Assignment 2 but using Modern Web Frameworks such as ReactJS
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them.
+[A List of Useful npm Packages for React Developers](https://dev.to/manindu/a-list-of-useful-npm-packages-for-react-developers-3dhg)
+`create-react-app`,`@material-ui/core`, `react-router-dom`, `axios`, `json-server`, `react-icons`, `concurently`
 
 ```
 Give examples

@@ -1,0 +1,10 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "scripts": {
+    "json-server": "json-server --watch cars.json -- port 3000"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  }
+}
