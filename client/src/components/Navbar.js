@@ -62,9 +62,10 @@ export default function ButtonAppBar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={handleClose}>Home</MenuItem>
+            <MenuItem onClick={handleClose}>Cart</MenuItem>
+            <MenuItem onClick={handleClose}>Checkout</MenuItem>
+            <MenuItem onClick={handleClose}>Success</MenuItem>
           </Menu>
           <Typography variant="h6" className={classes.title}>
             UTS-Hertz
