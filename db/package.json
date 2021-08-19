@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "db",
   "version": "1.0.0",
   "scripts": {
     "json-server": "json-server --watch cars.json -- port 3000"
