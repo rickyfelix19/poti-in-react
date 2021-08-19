@@ -1,8 +1,12 @@
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+
+import './App.css';
+import './routes';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import './App.css';
-
-import React from 'react';
 
 export default function App() {
   return (
@@ -15,3 +19,10 @@ export default function App() {
     </React.Fragment>
   );
 }
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
