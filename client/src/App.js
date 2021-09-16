@@ -3,19 +3,18 @@ import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
 import './App.css';
-import './routes';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './pages/Navbar';
+
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import Success from './pages/Success';
 
 export default function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <span className="Footer">
-        {' '}
-        <Footer />
-      </span>
     </React.Fragment>
   );
 }
