@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ProductCards from '../components/ProductCards';
 class Home extends Component {
   render() {
-    return <div></div>;
+    return <div>Hello World</div>;
   }
 }
 

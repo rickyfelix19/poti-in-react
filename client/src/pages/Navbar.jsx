@@ -7,7 +7,7 @@ class Navbar extends Component {
     return (
       <div>
         <Header />
-        <Footer />rrrrrrrrrrrrrrrrrrrrrrr
+        <Footer />
       </div>
     );
   }
