@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -62,10 +63,18 @@ export default function ButtonAppBar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Home</MenuItem>
-            <MenuItem onClick={handleClose}>Cart</MenuItem>
-            <MenuItem onClick={handleClose}>Checkout</MenuItem>
-            <MenuItem onClick={handleClose}>Success</MenuItem>
+            <Link to="/home">
+              <MenuItem onClick={handleClose}>Home</MenuItem>
+            </Link>
+            <Link to="/cart">
+              <MenuItem onClick={handleClose}>Cart</MenuItem>
+            </Link>
+            <Link to="/checkout">
+              <MenuItem onClick={handleClose}>Checkout</MenuItem>
+            </Link>
+            <Link to="/success">
+              <MenuItem onClick={handleClose}>Success</MenuItem>
+            </Link>
           </Menu>
           <Typography variant="h6" className={classes.title}>
             UTS-Hertz

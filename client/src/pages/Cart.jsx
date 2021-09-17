@@ -4,7 +4,14 @@ import OrderList from '../components/OrderList';
 
 class Cart extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <div>this is cart</div>
+        <div>
+          <OrderList />
+        </div>
+      </div>
+    );
   }
 }
 

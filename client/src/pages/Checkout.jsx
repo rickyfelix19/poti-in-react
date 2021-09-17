@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Form from '../components/Form';
 class Checkout extends Component {
   render() {
-    return <div></div>;
+    return <div>User Checking Out</div>;
+    <Form />;
   }
 }
 

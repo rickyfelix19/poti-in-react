@@ -1,6 +1,5 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import React, { Component, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -11,17 +10,44 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Success from './pages/Success';
 
-export default function App() {
-  return (
-    <React.Fragment>
-      <Navbar />
-    </React.Fragment>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Switch>
+            <Route exact path="/home">
+              <Navbar />
+              <Home />
+            </Route>
+            <Route exact path="/cart">
+              <Navbar />
+              <Cart />
+            </Route>
+            <Route exact path="/checkout">
+              <Navbar />
+              <Checkout />
+            </Route>
+            <Route exact path="/success">
+              <Navbar />
+              <Success />
+            </Route>
+            <Route exact path="/">
+              <Navbar />
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+export default App;
+
+//  ReactDOM.render(
+//    <BrowserRouter>
+//      <App />
+//    </BrowserRouter>,
+//    document.getElementById('root')
+//  )
