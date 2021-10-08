@@ -7,7 +7,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix main.js",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "connect": "concurrently \"cd client && npm start\" \"cd db && npm run server\""
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "eslint-plugin-react": "^7.25.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "concurrently": "^6.3.0"
   }
 }
