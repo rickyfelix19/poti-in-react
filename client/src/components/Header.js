@@ -10,7 +10,7 @@ import {
   IconButton,
   Menu,
   MenuItem
-} from '@mui/core';
+} from '@mui/material';
 import MenuIcon from '@mui/icons/Menu';
 import ShoppingCartIcon from '@mui/icons/ShoppingCart';
 
