@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -10,9 +10,9 @@ import {
   IconButton,
   Menu,
   MenuItem
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+} from '@mui/core';
+import MenuIcon from '@mui/icons/Menu';
+import ShoppingCartIcon from '@mui/icons/ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
   root: {

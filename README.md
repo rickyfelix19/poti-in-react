@@ -13,16 +13,16 @@ This is the exact copy of POTI Assignment 2 but using Modern Web Frameworks such
 
 ## Getting Started <a name = "getting_started"></a>
 
-
 ### Prerequisites
 
 What things you need to install the software and how to install them.
 [A List of Useful npm Packages for React Developers](https://dev.to/manindu/a-list-of-useful-npm-packages-for-react-developers-3dhg)
-`create-react-app`,`@material-ui/core`, `react-router-dom`, `axios`, `json-server`, `react-icons`, `concurently`
+`create-react-app`,`@mui/core`, `react-router-dom`, `axios`, `json-server`, `react-icons`, `concurently`
 
 ```
 Give examples
 ```
+
 **Programming on the Internet** Subject Outline: https://handbook.uts.edu.au/subjects/31748.html
 
 ## Getting Started <a name = "getting_started"></a>
@@ -41,8 +41,10 @@ Download and open it in React Environment
 ## Stack <a name = "stack"></a>
 
 Stack used in this repo:
+
 1. Bootstrap 5 CSS
 2. React.JS
 
 ## Rules <a name = "rules"></a>
+
 1. In order to properly learn React and Bootstrap, do not use any form of templates available online (either from a repo or any website)
