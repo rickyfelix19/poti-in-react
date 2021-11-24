@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ProductCards from '../components/ProductCards';
+import ProductCards from './components/ProductCards';
 
 import { Container } from '@mui/material';
 
@@ -9,7 +9,6 @@ class Home extends Component {
     return (
       <div>
         <Container>
-          <div>this is from Home</div>
           <div>
             <ProductCards />
           </div>

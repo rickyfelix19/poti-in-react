@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rickyfelix19/poti-in-react#readme",
   "devDependencies": {
+    "babel-plugin-root-import": "^6.6.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",

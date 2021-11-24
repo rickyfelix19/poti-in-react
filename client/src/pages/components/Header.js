@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { makeStyles } from '@mui/core/styles';
+import { makeStyles } from '@mui/styles';
 import {
   AppBar,
   Toolbar,
@@ -11,20 +11,20 @@ import {
   Menu,
   MenuItem
 } from '@mui/material';
-import MenuIcon from '@mui/icons/Menu';
-import ShoppingCartIcon from '@mui/icons/ShoppingCart';
+import MenuIcon from '@mui/icons-material/Menu';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     flexGrow: 1
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: '15px'
   },
   title: {
     flexGrow: 1
   }
-}));
+});
 
 export default function ButtonAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);

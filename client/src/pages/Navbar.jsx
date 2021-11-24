@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../pages/components/Header';
+import Footer from '../pages/components/Footer';
 
 class Navbar extends Component {
   render() {

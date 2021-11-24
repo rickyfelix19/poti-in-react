@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import OrderList from '../components/OrderList';
+import OrderList from '../pages/components/OrderList';
 
 class Cart extends Component {
   render() {
