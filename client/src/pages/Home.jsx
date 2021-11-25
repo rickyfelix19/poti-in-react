@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ProductCards from './components/ProductCards';
 
-import { Container, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 class Home extends Component {
   render() {

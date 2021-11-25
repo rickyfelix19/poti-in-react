@@ -16,7 +16,7 @@ import carDatabase from '../../cars';
 class ProductCards extends Component {
   render() {
     return (
-      <div style={{ marginBottom: '75px' }}>
+      <div className={ProductCards} style={{ marginBottom: '75px' }}>
         {/* mapping */}
         {carDatabase.cars.map((car) => {
           return (
@@ -32,21 +32,20 @@ class ProductCards extends Component {
                     />
                   </div>
                 </CardMedia>
-                <p>
-                  <CardHeader>
-                    brand = {car.brand} <br />
-                    model = {car.model} <br />
-                    year = {car.model_year} <br />
-                  </CardHeader>
-                  <CardContent>
+                <CardContent>
+                  {car.brand} {car.model} ({car.model_year}) <br />
+                  <div>
                     mileage = {car.mileage} <br />
                     fuel = {car.fuel_type} <br />
                     seats = {car.seats} <br />
                     price = {car.price_per_day} <br />
-                    {/* availability = {car.availability} <br /> */}
+                    availability = {car.availability}
+                    <br /> <br />
+                  </div>
+                  <div>
                     description = {car.description} <br />
-                  </CardContent>
-                </p>
+                  </div>
+                </CardContent>
                 <CardActions>
                   <Button>Rent</Button>
                 </CardActions>
