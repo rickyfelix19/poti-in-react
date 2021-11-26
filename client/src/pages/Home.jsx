@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 import ProductCards from './components/ProductCards';
 
-import { Box } from '@mui/material';
+import { Container } from '@mui/material';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Box style={{ padding: '15px', margin: '30px' }}>
+        <Container style={{ padding: '20px 0px' }}>
           <ProductCards />
-        </Box>
+        </Container>
       </div>
     );
   }

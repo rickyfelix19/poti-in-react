@@ -50,7 +50,7 @@ export default function ButtonAppBar() {
           >
             <Button
               aria-controls="simple-menu"
-              aria-haspopup="true"
+              aria-haspopup=true
               onClick={handleClick}
             >
               <MenuIcon style={{ color: 'white' }} />
