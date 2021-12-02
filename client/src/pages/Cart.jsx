@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 import OrderList from '../pages/components/OrderList';
 
+import { Container } from '@mui/material';
+
 class Cart extends Component {
   render() {
     return (
       <div>
-        <div>this is cart</div>
-        <div>
+        <Container>
+          <h3>Your Car Reservation</h3>
           <OrderList />
-        </div>
+        </Container>
       </div>
     );
   }

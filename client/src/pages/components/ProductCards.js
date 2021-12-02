@@ -15,6 +15,7 @@ import {
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton from '@mui/material/IconButton';
+import { useButton } from '@mui/base/ButtonUnstyled';
 
 import { grid, flexbox } from '@mui/system';
 
@@ -91,7 +92,7 @@ export default function ProductCards() {
                     display: 'flex'
                   }}
                 >
-                  <Button>Rent This Car</Button>
+                  <Button variant="contained">Select</Button>
                 </CardActions>
 
                 {/* Descriptions */}
