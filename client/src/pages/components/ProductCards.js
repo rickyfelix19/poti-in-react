@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import {
@@ -24,26 +24,30 @@ import CarDatabase from '../../cars';
 import { styled } from '@mui/material/styles';
 import '../stylesheets/ProductCards.scss';
 
-const ExpandMore = styled((props) => {
-  // to expand more description
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest
-  })
-}));
+// what will happen when user select
+const isSelected = () => {
+  console.log('selected');
+};
 
-// to check if item is available
+// error announcement when no selection is made
 
 export default function ProductCards() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isSelected, setIsSelected] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const handleExpandClick = (i) => {
+    setIsSelected((isExpanded) => (setIsExpanded === i ? null : i));
+
+    // let { expanded } = this.state;
+    // setExpanded(!expanded);
+    // this.setState({
+    //   expanded: {
+    //     ...expanded,
+    //     [index]: !expanded[index]
+    //   }
+    // });
   };
+
   return (
     <div>
       <Box
@@ -56,62 +60,85 @@ export default function ProductCards() {
       >
         {/* mapping */}
         {CarDatabase.cars.map((car, i) => {
-          return (
-            <Card
-              sx={{
-                Width: '300px',
-                Height: '500px'
-              }}
-            >
-              <CardHeader>{car[i]}</CardHeader>
-              {/* Image */}
-              <CardMedia component="img" src={car.images} alt={car.brand} />
+          const ExpandMore = styled((props) => {
+            // to expand more description
+            const { expand, ...other } = props;
+            return <IconButton {...other} />;
+          })(({ theme, expand }) => ({
+            transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+            marginLeft: 'auto',
+            transition: theme.transitions.create('transform', {
+              duration: theme.transitions.duration.shortest
+            })
+          }));
 
-              {/* Details */}
-              <CardContent>
-                <Typography>
-                  {car.brand} {car.model}
+          if (car.availability === true) {
+            // only map cars that is available
+            return (
+              <Card
+                sx={{
+                  Width: '300px',
+                  Height: '500px'
+                }}
+              >
+                <CardHeader>{car[i]}</CardHeader>
+                {/* Image */}
+                <CardMedia component="img" src={car.images} alt={car.brand} />
+
+                {/* Details */}
+                <CardContent>
+                  <Typography>
+                    {car.brand} {car.model}
+                    <br />
+                    (y.{car.model_year})
+                  </Typography>
+                  <Typography>
+                    <br />
+                    mileage: {car.mileage} <br />
+                    fuel: {car.fuel_type} <br />
+                    seats: {car.seats} <br />
+                    price: {car.price_per_day} <br />
+                  </Typography>
                   <br />
-                  (y.{car.model_year})
-                </Typography>
-                <Typography>
-                  <br />
-                  mileage: {car.mileage} <br />
-                  fuel: {car.fuel_type} <br />
-                  seats: {car.seats} <br />
-                  price: {car.price_per_day} <br />
-                  {/* availability: {car.availability} */}
-                </Typography>
-                <br />
 
-                {/* Button */}
-                <CardActions
-                  sx={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    display: 'flex'
-                  }}
-                >
-                  <Button variant="contained">Select</Button>
-                </CardActions>
-
-                {/* Descriptions */}
-                <CardActions>
-                  <ExpandMore
-                    expand={expanded}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more"
+                  {/* Button */}
+                  <CardActions
+                    sx={{
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      display: 'flex'
+                    }}
                   >
-                    <ExpandMoreIcon />
-                  </ExpandMore>
-                </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
-                  <Typography> Description: {car.description}</Typography>
-                </Collapse>
-              </CardContent>
-            </Card>
-          );
+                    <Button
+                      variant="contained"
+                      onClick={() => setIsSelected(!isSelected)}
+                    >
+                      Select
+                    </Button>
+                  </CardActions>
+
+                  {/* Descriptions */}
+                  <CardActions>
+                    <ExpandMore
+                      key={car.id}
+                      car={car}
+                      // expand={expanded}
+                      setActive={setIsExpanded}
+                      isActive={isExpanded === i}
+                      onClick={() => setIsExpanded(i)}
+                      aria-expanded={isExpanded}
+                      aria-label="show more"
+                    >
+                      <ExpandMoreIcon />
+                    </ExpandMore>
+                  </CardActions>
+                  <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+                    <Typography> Description: {car.description}</Typography>
+                  </Collapse>
+                </CardContent>
+              </Card>
+            );
+          }
         })}
       </Box>
     </div>

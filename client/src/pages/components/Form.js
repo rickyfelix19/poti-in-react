@@ -49,7 +49,7 @@ export default function Form() {
             <TextField
               label="Email Address"
               variant="filled"
-              placeholder="something@email.com"
+              placeholder="name@email.com"
               required
               value="{email}"
               type="email"
