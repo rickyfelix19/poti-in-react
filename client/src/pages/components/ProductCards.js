@@ -24,13 +24,6 @@ import CarDatabase from '../../cars';
 import { styled } from '@mui/material/styles';
 import '../stylesheets/ProductCards.scss';
 
-// what will happen when user select
-const isSelected = () => {
-  console.log('selected');
-};
-
-// error announcement when no selection is made
-
 export default function ProductCards() {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [isSelected, setIsSelected] = React.useState(false);
@@ -47,6 +40,8 @@ export default function ProductCards() {
     //   }
     // });
   };
+
+  // error announcement when no selection is made
 
   return (
     <div>

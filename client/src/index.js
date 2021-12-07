@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import WebFont from 'webfontloader';
 
 import App from './App';
+import Notification from './pages/components/NotificationBox';
 
 WebFont.load({
   google: {
@@ -15,7 +16,8 @@ WebFont.load({
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Notification />
   </React.StrictMode>,
   document.getElementById('root')
 );

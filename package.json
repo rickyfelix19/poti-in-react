@@ -9,7 +9,8 @@
     "lint": "eslint --fix main.js",
     "format": "prettier -w .",
     "connect": "concurrently \"cd client && npm start\" \"cd db && npm run server\"",
-    "test": "jest"
+    "test": "jest",
+    "start": "cd client && npm start"
   },
   "repository": {
     "type": "git",
