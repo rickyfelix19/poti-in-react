@@ -5,26 +5,78 @@ export default function NotificationBox() {
   const [isNotified, setIsNotified] = useState(true);
 
   return (
-    <Box>
-      <Alert
-        
-        action={
-          <IconButton
-            aria-label="close"
-            color="inherit"
-            size="small"
-            onClick={() => {
-              setIsNotified(false);
-            }}
-            severity="success"
+    <div>
+      <div>
+        {/* Success */}
+        <Box>
+          <Alert
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setIsNotified(false);
+                }}
+                severity="success"
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
           >
-            <CloseIcon fontSize="inherit" />
-          </IconButton>
-        }
-        sx={{ mb: 2 }}
-      >
-        <AlertTitle>Success</AlertTitle>
-      </Alert>
-    </Box>
+            <AlertTitle>Success</AlertTitle>
+          </Alert>
+        </Box>
+      </div>
+
+      <div>
+        {/* Warning */}
+        <Box>
+          <Alert
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setIsNotified(false);
+                }}
+                severity="caution"
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
+          >
+            <AlertTitle>Missing Information</AlertTitle>
+          </Alert>
+        </Box>
+      </div>
+
+      <div>
+        {/* Error Box */}
+        <Box>
+          <Alert
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setIsNotified(false);
+                }}
+                severity="error"
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
+          >
+            <AlertTitle>Error</AlertTitle>
+          </Alert>
+        </Box>
+      </div>
+    </div>
   );
 }
