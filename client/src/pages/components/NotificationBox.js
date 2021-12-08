@@ -5,8 +5,8 @@ import { Alert, AlertTitle, Box, IconButton, Button } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 export const NotificationBox = ({
-  isNotified,
-  closeNotified,
+  sentNotif,
+  closeNotif,
   title,
   description,
   colorNotif
@@ -17,7 +17,6 @@ export const NotificationBox = ({
   return (
     <>
       <div>
-        {/* Success */}
         <Box>
           <Alert
             action={
@@ -25,14 +24,19 @@ export const NotificationBox = ({
                 aria-label="close"
                 color="inherit"
                 size="small"
-                onClick={isNotified}
-                onClose={closeNotified}
+                onClick={sentNotif}
+                onClose={closeNotif}
                 severity={colorNotif}
               >
-                <CloseIcon fontSize="inherit" onClose={closeNotified} />
+                <CloseIcon fontSize="inherit" onClose={closeNotif} />
               </IconButton>
             }
-            sx={{ mb: 2 }}
+            sx={{
+              mb: 2,
+              alignItems: 'center',
+              justifyContent: 'center',
+              display: 'flex'
+            }}
           >
             <AlertTitle>{title}</AlertTitle>
             {description}
@@ -44,8 +48,8 @@ export const NotificationBox = ({
 };
 
 NotificationBox.propTypes = {
-  isNotified: PropTypes.bool.isRequired,
-  closeNotified: PropTypes.bool.isRequired,
+  sentNotif: PropTypes.bool.isRequired,
+  closeNotif: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   colorNotif: PropTypes.string.isRequired

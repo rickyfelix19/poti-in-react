@@ -6,6 +6,7 @@ import WebFont from 'webfontloader';
 
 import App from './App';
 import Notification from './pages/components/NotificationBox';
+import ProductCards from './pages/components/ProductCards';
 
 WebFont.load({
   google: {
@@ -17,7 +18,8 @@ WebFont.load({
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Notification />
+    {/* <Notification /> */}
+    <ProductCards />
   </React.StrictMode>,
   document.getElementById('root')
 );
