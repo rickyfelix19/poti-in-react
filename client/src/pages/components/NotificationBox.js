@@ -1,11 +1,21 @@
-import React, { useState, Component } from 'react';
+import React from 'react';
+import PropTypes from 'propTypes';
+
 import { Alert, AlertTitle, Box, IconButton, Button } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-export default function NotificationBox() {
-  const [isNotified, setIsNotified] = useState(true);
+
+export const NotificationBox = ({
+  isNotified,
+  closeNotified,
+  title,
+  description,
+  colorNotif
+}) => {
+  // const [isNotified, setIsNotified] = useState(true);
+  // severity: success, error, caution
 
   return (
-    <div>
+    <>
       <div>
         {/* Success */}
         <Box>
@@ -15,68 +25,28 @@ export default function NotificationBox() {
                 aria-label="close"
                 color="inherit"
                 size="small"
-                onClick={() => {
-                  setIsNotified(false);
-                }}
-                severity="success"
+                onClick={isNotified}
+                onClose={closeNotified}
+                severity={colorNotif}
               >
-                <CloseIcon fontSize="inherit" />
+                <CloseIcon fontSize="inherit" onClose={closeNotified} />
               </IconButton>
             }
             sx={{ mb: 2 }}
           >
-            <AlertTitle>Success</AlertTitle>
+            <AlertTitle>{title}</AlertTitle>
+            {description}
           </Alert>
         </Box>
       </div>
-
-      <div>
-        {/* Warning */}
-        <Box>
-          <Alert
-            action={
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                size="small"
-                onClick={() => {
-                  setIsNotified(false);
-                }}
-                severity="caution"
-              >
-                <CloseIcon fontSize="inherit" />
-              </IconButton>
-            }
-            sx={{ mb: 2 }}
-          >
-            <AlertTitle>Missing Information</AlertTitle>
-          </Alert>
-        </Box>
-      </div>
-
-      <div>
-        {/* Error Box */}
-        <Box>
-          <Alert
-            action={
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                size="small"
-                onClick={() => {
-                  setIsNotified(false);
-                }}
-                severity="error"
-              >
-                <CloseIcon fontSize="inherit" />
-              </IconButton>
-            }
-            sx={{ mb: 2 }}
-          >
-            <AlertTitle>Error</AlertTitle>
-          </Alert>
-        </Box>
-      </div>
-    </div>
+    </>
   );
-}
+};
+
+NotificationBox.propTypes = {
+  isNotified: PropTypes.bool.isRequired,
+  closeNotified: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  colorNotif: PropTypes.string.isRequired
+};
